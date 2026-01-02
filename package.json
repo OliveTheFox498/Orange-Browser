@@ -1,0 +1,29 @@
+{
+  "name": "orange-browser",
+  "version": "1.0.0",
+  "description": "A web browser built with privacy and style in mind.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.orange.browser",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "cscLink": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Orange Browser"
+    }
+  },
+  "author": "Reverie Studios",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  }
+}

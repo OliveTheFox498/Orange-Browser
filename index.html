@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Orange Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="toolbar">
+            <div id="tabs-container">
+                <div id="tabs">
+                    <!-- Tabs will be injected here -->
+                    <button id="add-tab" title="New Tab"><i data-lucide="plus"></i></button>
+                </div>
+                <div id="window-controls">
+                    <button id="min-btn" title="Minimize"><i data-lucide="minus"></i></button>
+                    <button id="max-btn" title="Maximize"><i data-lucide="square"></i></button>
+                    <button id="close-btn" title="Close"><i data-lucide="x"></i></button>
+                </div>
+            </div>
+            <div id="navigation-bar">
+                <div id="nav-buttons">
+                    <button id="back-btn" title="Go back"><i data-lucide="arrow-left"></i></button>
+                    <button id="forward-btn" title="Go forward"><i data-lucide="arrow-right"></i></button>
+                    <button id="reload-btn" title="Reload page"><i data-lucide="rotate-cw"></i></button>
+                </div>
+                <div id="address-bar">
+                    <i data-lucide="lock" id="ssl-icon"></i>
+                    <input type="text" id="url-input" placeholder="Search Google or enter URL">
+                    <button id="bookmark-btn" title="Bookmark this page"><i data-lucide="star"></i></button>
+                </div>
+                <div id="extra-buttons">
+                    <button id="menu-btn" title="Menu"><i data-lucide="more-vertical"></i></button>
+                </div>
+            </div>
+            <div id="bookmarks-bar">
+                <!-- Bookmarks will be injected here -->
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div id="webview-container">
+                <!-- Webviews will be injected here -->
+            </div>
+            <div id="sidebar" class="hidden">
+                <div id="sidebar-header">
+                    <h2 id="sidebar-title">History</h2>
+                    <button id="close-sidebar"><i data-lucide="x"></i></button>
+                </div>
+                <div id="sidebar-content">
+                    <!-- History or Settings will be injected here -->
+                </div>
+                <div id="sidebar-footer">
+                    <p>Orange Browser V1.0.0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown -->
+        <div id="menu-dropdown" class="hidden">
+            <button id="show-history"><i data-lucide="history"></i> History</button>
+            <button id="show-bookmarks"><i data-lucide="bookmarks"></i> All Bookmarks</button>
+            <button id="show-settings"><i data-lucide="settings"></i> Settings</button>
+            <hr>
+            <button id="inspect-btn"><i data-lucide="terminal"></i> Inspect Element</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

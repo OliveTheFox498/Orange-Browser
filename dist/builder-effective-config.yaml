@@ -1,0 +1,14 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.orange.browser
+win:
+  target: nsis
+  icon: assets/icon.ico
+  cscLink: null
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: Orange Browser
+files: []
+electronVersion: 39.2.7
